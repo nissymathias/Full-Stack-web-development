@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0385)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f69897a0cf251a0a3fcae52/622c3cdf0cf2e355441328d5/1653540066090/9.color-object.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677231860&Signature=BydoQPeW6%2BkH1imumro4mpCRTHY%3D&x-itemId=5f69897a0cf251a0a3fcae52&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>
+            Multiple colors
+        </title>
+    <script>'use strict';
+
+var rootHandle = document.getElementById('root');
+
+var colors = {
+    red: ['energy', 'strength', 'power', 'courage'],
+    blue: ['loyalty', 'trust', 'stability', 'confidence'],
+    orange: ['excitment', 'fun', 'haste', 'action'],
+    yellow: ['cheerfulness', 'happiness', 'joy', 'optimism']
+};
+
+var ele = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        { style: { color: 'red' } },
+        'EXAMPLE OUTPUT'
+    ),
+    React.createElement('hr', null),
+    React.createElement(
+        'h2',
+        null,
+        'Colors & its symbols'
+    ),
+    React.createElement(
+        'ul',
+        null,
+        Object.keys(colors).map(function (elem, i) {
+            console.log(elem);
+            var result = (i ? ',' : '') + colors[elem];
+            return React.createElement(
+                'li',
+                { key: i },
+                ' ',
+                elem,
+                ' - ',
+                result,
+                ' '
+            );
+        })
+    )
+);
+ReactDOM.render(ele, rootHandle);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsicm9vdEhhbmRsZSIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJjb2xvcnMiLCJyZWQiLCJibHVlIiwib3JhbmdlIiwieWVsbG93IiwiZWxlIiwiY29sb3IiLCJPYmplY3QiLCJrZXlzIiwibWFwIiwiZWxlbSIsImkiLCJjb25zb2xlIiwibG9nIiwicmVzdWx0IiwiUmVhY3RET00iLCJyZW5kZXIiXSwibWFwcGluZ3MiOiI7O0FBQ1csSUFBTUEsYUFBYUMsU0FBU0MsY0FBVCxDQUF3QixNQUF4QixDQUFuQjs7QUFFQSxJQUFNQyxTQUFTO0FBQ2RDLFNBQUssQ0FBQyxRQUFELEVBQVcsVUFBWCxFQUF1QixPQUF2QixFQUFnQyxTQUFoQyxDQURTO0FBRWRDLFVBQU0sQ0FBQyxTQUFELEVBQVksT0FBWixFQUFxQixXQUFyQixFQUFrQyxZQUFsQyxDQUZRO0FBR2RDLFlBQVEsQ0FBQyxXQUFELEVBQWMsS0FBZCxFQUFxQixPQUFyQixFQUE4QixRQUE5QixDQUhNO0FBSWRDLFlBQVEsQ0FBQyxjQUFELEVBQWlCLFdBQWpCLEVBQThCLEtBQTlCLEVBQXFDLFVBQXJDO0FBSk0sQ0FBZjs7QUFPQyxJQUFNQyxNQUNOO0FBQUE7QUFBQTtBQUNJO0FBQUE7QUFBQSxVQUFJLE9BQVMsRUFBQ0MsT0FBTSxLQUFQLEVBQWI7QUFBQTtBQUFBLEtBREo7QUFDbUQsbUNBRG5EO0FBRUk7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQUZKO0FBSUk7QUFBQTtBQUFBO0FBQ0tDLGVBQU9DLElBQVAsQ0FBWVIsTUFBWixFQUFvQlMsR0FBcEIsQ0FBd0IsVUFBQ0MsSUFBRCxFQUFNQyxDQUFOLEVBQVk7QUFDakNDLG9CQUFRQyxHQUFSLENBQVlILElBQVo7QUFDQSxnQkFBTUksU0FBVSxDQUFDSCxJQUFJLEdBQUosR0FBVSxFQUFYLElBQWtCWCxPQUFPVSxJQUFQLENBQWxDO0FBQ0EsbUJBQU87QUFBQTtBQUFBLGtCQUFJLEtBQU1DLENBQVY7QUFBQTtBQUFnQkQsb0JBQWhCO0FBQUE7QUFBeUJJLHNCQUF6QjtBQUFBO0FBQUEsYUFBUDtBQUNILFNBSkE7QUFETDtBQUpKLENBREE7QUFjQUMsU0FBU0MsTUFBVCxDQUFnQlgsR0FBaEIsRUFBb0JSLFVBQXBCIiwiZmlsZSI6IklubGluZSBCYWJlbCBzY3JpcHQiLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgICAgICAgICAgY29uc3Qgcm9vdEhhbmRsZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JylcbiAgICAgICAgICAgXG4gICAgICAgICAgIGNvbnN0IGNvbG9ycyA9IHtcbiAgICAgICAgICAgIHJlZDogWydlbmVyZ3knLCAnc3RyZW5ndGgnLCAncG93ZXInLCAnY291cmFnZSddLFxuICAgICAgICAgICAgYmx1ZTogWydsb3lhbHR5JywgJ3RydXN0JywgJ3N0YWJpbGl0eScsICdjb25maWRlbmNlJ10sXG4gICAgICAgICAgICBvcmFuZ2U6IFsnZXhjaXRtZW50JywgJ2Z1bicsICdoYXN0ZScsICdhY3Rpb24nXSxcbiAgICAgICAgICAgIHllbGxvdzogWydjaGVlcmZ1bG5lc3MnLCAnaGFwcGluZXNzJywgJ2pveScsICdvcHRpbWlzbSddXG4gICAgICAgIH1cblxuICAgICAgICAgICAgY29uc3QgZWxlID0gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8aDEgc3R5bGUgPSB7e2NvbG9yOidyZWQnfX0+RVhBTVBMRSBPVVRQVVQ8L2gxPjxoci8+XG4gICAgICAgICAgICAgICAgPGgyPkNvbG9ycyAmIGl0cyBzeW1ib2xzPC9oMj5cblxuICAgICAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgICAgICAge09iamVjdC5rZXlzKGNvbG9ycykubWFwKChlbGVtLGkpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGVsZW0pXG4gICAgICAgICAgICAgICAgICAgICAgICBjb25zdCByZXN1bHQgPSAgKGkgPyAnLCcgOiAnJykgKyAgY29sb3JzW2VsZW1dXG4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gPGxpIGtleSA9e2l9PiB7IGVsZW19IC0ge3Jlc3VsdH0gPC9saT5cbiAgICAgICAgICAgICAgICAgICAgfSl9XG4gICAgICAgICAgICAgICAgPC91bD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgKVxuICAgICAgICAgICAgUmVhY3RET00ucmVuZGVyKGVsZSxyb290SGFuZGxlKVxuICAgICAgICAiXX0=</script></head>
+    <body>
+        <div id="root"><div><h1 style="color: red;">EXAMPLE OUTPUT</h1><hr><h2>Colors &amp; its symbols</h2><ul><li> red - energy,strength,power,courage </li><li> blue - ,loyalty,trust,stability,confidence </li><li> orange - ,excitment,fun,haste,action </li><li> yellow - ,cheerfulness,happiness,joy,optimism </li></ul></div></div>
+
+        <script crossorigin="" src="./color object_files/react.development.js.download"></script>
+        <script crossorigin="" src="./color object_files/react-dom.development.js.download"></script>
+        <script crossorigin="" src="./color object_files/babel.js.download"></script>
+
+        <script type="text/babel">
+           const rootHandle = document.getElementById('root')
+           
+           const colors = {
+            red: ['energy', 'strength', 'power', 'courage'],
+            blue: ['loyalty', 'trust', 'stability', 'confidence'],
+            orange: ['excitment', 'fun', 'haste', 'action'],
+            yellow: ['cheerfulness', 'happiness', 'joy', 'optimism']
+        }
+
+            const ele = (
+            <div>
+                <h1 style = {{color:'red'}}>EXAMPLE OUTPUT</h1><hr/>
+                <h2>Colors & its symbols</h2>
+
+                <ul>
+                    {Object.keys(colors).map((elem,i) => {
+                        console.log(elem)
+                        const result =  (i ? ',' : '') +  colors[elem]
+                        return <li key ={i}> { elem} - {result} </li>
+                    })}
+                </ul>
+            </div>
+            )
+            ReactDOM.render(ele,rootHandle)
+        </script>
+    
+</body></html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0407)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f6d80f90cf2441dcc6ed8dd/622c3cdf0cf2e355441328d5/1654776003916/6.assignment-component-article-likes.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677232086&Signature=YchR%2B7e6aG1N0PQCvbTtnCbRtgw%3D&x-itemId=5f6d80f90cf2441dcc6ed8dd&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./6.assignment-component-article-likes_files/react.development.js.download"></script>
+        <script src="./6.assignment-component-article-likes_files/react-dom.development.js.download"></script>
+        <script src="./6.assignment-component-article-likes_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            
+            const articles = [
+                { id: 1, title: 'Article 1', meta: { likes: 10, dislikes: 0} },
+                { id: 2, title: 'Article 2', meta: { likes: 20, dislikes: 10 }},
+                { id: 3, title: 'Article 3', meta: { likes: 5, dislikes: 0 } }
+            ]
+
+            function ArticlesList(props){
+                return (
+                    <div>
+                        {articles.map((ele)=>{
+                            return (
+                                <li>{ele.title}-likes {ele.meta.likes}, dislikes-{ele.meta.dislikes} </li>
+                            )
+                                
+                        })}  
+                        
+                    </div>
+                )
+            }
+
+            ReactDOM.render(<ArticlesList atricles={articles}/>,rootHandle)
+        </script>
+    
+</body></html>

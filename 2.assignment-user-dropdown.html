@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0395)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5fa0c4120cf2f81dca32a19d/622c3cdf0cf2e355441328d5/1656307355975/2.assignment-user-dropdown.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677244403&Signature=qxl1xWY1WkfK8FXpySoePYAO61c%3D&x-itemId=5fa0c4120cf2f81dca32a19d&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./2.assignment-user-dropdown_files/react.development.js.download"></script>
+        <script src="./2.assignment-user-dropdown_files/react-dom.development.js.download"></script>
+        <script src="./2.assignment-user-dropdown_files/babel.js.download"></script>
+        <script src="./2.assignment-user-dropdown_files/axios.min.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            const url='https://jsonplaceholder.typicode.com/users'
+            const {useState,useEffect} = React 
+
+            function UsersSelect (props){
+                const [countries,setCountries]= useState([])
+
+                useEffect(()=>{
+                    axios.get(url)
+                        .then((response)=>{     
+                        const result = response.data
+                        console.log(result)
+                        setCountries(result)
+                        })
+                    
+                },[])
+                return (
+                    <div>                    
+                        <label>Users</label>
+                        <select>
+                            <option value ="">select brand</option>
+                            {countries.map((ele,i)=>{
+                                return <option key = {i}>{ele.name}</option>
+                            })}
+                        </select>
+                          
+                    </div>
+                )
+            }
+            ReactDOM.render(<UsersSelect/>,rootHandle)
+        </script>
+    
+</body></html>

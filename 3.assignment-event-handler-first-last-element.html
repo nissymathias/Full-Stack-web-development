@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0420)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f71565f0cf2d43e7949dd64/622c3cdf0cf2e355441328d5/1654932992483/3.assignment-event-handler-first-last-element.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677232189&Signature=%2B86uzTq6AFtRwWQo%2Bpi7%2FaTd9LY%3D&x-itemId=5f71565f0cf2d43e7949dd64&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./3.assignment-event-handler-first-last-element_files/react.development.js.download"></script>
+        <script src="./3.assignment-event-handler-first-last-element_files/react-dom.development.js.download"></script>
+        <script src="./3.assignment-event-handler-first-last-element_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            function TasksList(props){
+                const tasks = [
+                  { id: 1, title: 'Task 1', isCompleted: true },
+                  { id: 2, title: 'Task 2', isCompleted: true },
+                  { id: 3, title: 'Task 3', isCompleted: false }
+              ]
+
+                return (
+                    <div>
+                        <button onClick={Generate}>First Task</button>
+                        <button onClick={LastIndex}>Last Task</button>
+                    </div>
+                )
+                function Generate(props){
+                    {tasks.find((ele)=>{
+                        if(ele.id == 1){
+                            alert(ele.title)
+                        }
+                    })}
+                }
+                function LastIndex(props){
+                    {tasks.find((ele)=>{
+                        if(ele.id == 3){
+                            alert(ele.title)
+                        }
+                    })}
+                }
+            }
+            const ele = <TasksList/>
+            ReactDOM.render(ele,rootHandle)
+        </script>
+    
+</body></html>

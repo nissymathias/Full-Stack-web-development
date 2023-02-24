@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0408)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f6d7fd30cf2a7f2d300731f/622c3cdf0cf2e355441328d5/1654750772277/4.assignment-component-current%20time.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677232038&Signature=styXq6txw6D68q81d8Ob5JkC%2F2Y%3D&x-itemId=5f6d7fd30cf2a7f2d300731f&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./4.assignment-component-current time_files/react.development.js.download"></script>
+        <script src="./4.assignment-component-current time_files/react-dom.development.js.download"></script>
+        <script src="./4.assignment-component-current time_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            const Currenttime = () => {
+                var today = new Date()
+                var hour = today.getHours()
+                var ampm = hour >= 12 ? 'PM' : 'AM';
+                var time = hour + ':' + today.getMinutes() + ampm;
+            
+            return (
+                <div>
+                    <h1>{time}</h1>
+                </div>
+                )
+            }
+            ReactDOM.render(<Currenttime/>,rootHandle)
+        </script>
+    
+</body></html>

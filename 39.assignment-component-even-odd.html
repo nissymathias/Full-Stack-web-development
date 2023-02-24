@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0401)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f7716c50cf23e824a688371/622c3cdf0cf2e355441328d5/1654485437483/39.assignment-component-even-odd.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677233270&Signature=qzir4ZUQbndSw4eTqqKdUteH2Dc%3D&x-itemId=5f7716c50cf23e824a688371&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./39.assignment-component-even-odd_files/react.development.js.download"></script>
+        <script src="./39.assignment-component-even-odd_files/react-dom.development.js.download"></script>
+        <script src="./39.assignment-component-even-odd_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            function NumberShow(props){ //child
+            return (
+                (props.name %2==0)? (
+                    <h2>{props.name} is even</h2> )
+                :(
+                    <h2>{props.name} is odd</h2>
+                )
+            )
+            }
+
+            function App(props){ //parent
+                const n=[10,21];
+                return (
+                    <div>
+                        {n.map((ele) => {
+                            return <NumberShow name ={ele}/>
+                        })}
+
+                    </div>
+                )
+
+            }
+            ReactDOM.render(<App/>,rootHandle)
+        </script>
+    
+</body></html>

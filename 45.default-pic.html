@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0383)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f7717d90cf23e824a6883ad/622c3cdf0cf2e355441328d5/1654611621663/45.default-pic.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677235987&Signature=ZuVhQ6kq9krnqUEPpSsFRDYCGgg%3D&x-itemId=5f7717d90cf23e824a6883ad&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./45.default-pic_files/react.development.js.download"></script>
+        <script src="./45.default-pic_files/react-dom.development.js.download"></script>
+        <script src="./45.default-pic_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            function UserProfile(props){
+                return (
+                    <div>
+                        <UserAvatar user1 ={props.user1} />
+                        <DefaultAvatar user2={props.user2}/>
+                    </div>
+                )
+            }
+            function DefaultAvatar(props) {
+                return (
+                    <div>   
+                        <img src ='https://i.ibb.co/fDGgcyJ/default-user-pic.png'/>
+                        <h2>{props.user2.name}</h2>
+                    </div>
+                )
+            }
+            function UserAvatar(props){
+                return (
+                    <div>
+                        <img src="https://i.ibb.co/FKvv2Mr/donna.png"/>
+                        <h2>{props.user1.name}</h2>
+                    </div>
+                )
+            }
+            function App(props){
+                const user1 = { id: 1, name: 'Dona', avatar: 'https://i.ibb.co/FKvv2Mr/donna.png' }
+                const user2 = { id: 1, name: 'Rachel', avatar: '' }
+                return (
+                    <div>
+                        <UserProfile user1 ={user1}  user2 ={user2} />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App/>,rootHandle)
+        </script>
+    
+</body></html>

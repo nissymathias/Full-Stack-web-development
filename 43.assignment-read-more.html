@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0394)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f77179a0cf23e824a688397/622c3cdf0cf2e355441328d5/1654607479828/43.assignment-read-more.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677235931&Signature=%2Fw69DS0zJVreLujKYYmCxfHRXCM%3D&x-itemId=5f77179a0cf23e824a688397&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./43.assignment-read-more_files/react.development.js.download"></script>
+        <script src="./43.assignment-read-more_files/react-dom.development.js.download"></script>
+        <script src="./43.assignment-read-more_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            function ArticleIntro(props){
+                return (
+                    <div>
+                        <p>{props.FirstString}<hr/></p>
+                        <p>{props.SecondString} <br/>
+                        <button onClick={() => {alert("React (also known as React.js or ReactJS) is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies.React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with rendering data to the DOM, and so creating React applications usually requires the use of additional libraries for state management and routing. Redux and React Router are respective examples of such libraries.")}}>Read more</button><hr/></p>
+                    </div>
+                )
+            }
+
+
+            function App(props){
+                const FirstString = "React is awesome"
+                const SecondString ="React (also known as React.js or ReactJS) is an open-source, front end, JavaScript library for build..."
+                return (
+                    <div>
+                        <ArticleIntro FirstString = {FirstString} SecondString ={SecondString}/>
+                    </div>
+                )
+            }
+            ReactDOM.render(<App/>,rootHandle)
+        </script>
+    
+</body></html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0398)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f7718190cf23e824a6883ba/622c3cdf0cf2e355441328d5/1654617780913/47-assignment-user-status.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677236035&Signature=u%2FdIYBZPPcGY25p%2BKwn75qco0oU%3D&x-itemId=5f7718190cf23e824a6883ba&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./47-assignment-user-status_files/react.development.js.download"></script>
+        <script src="./47-assignment-user-status_files/react-dom.development.js.download"></script>
+        <script src="./47-assignment-user-status_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+                    function UserStatus(props){
+                        if(props.user1.isLoggedIn === false){
+                            props.user1.isLoggedIn = "not logged in"
+                        }
+                        if (props.user2.isLoggedIn === true){
+                            props.user2.isLoggedIn = "logged in"
+                        }
+                        console.log(props.user2.isLoggedIn)
+                        return (
+                            <div>
+                                <p>{props.user1.name} is currently <strong>{props.user1.isLoggedIn}</strong> the system</p>
+                                <p>{props.user2.name} is currently <strong>{props.user2.isLoggedIn}</strong> the system</p>
+                            </div>
+                        )
+                    }
+
+                    function App(props){
+                        const user1 = { id: 1, name: 'adam', isLoggedIn: false }
+                        const user2 = { id: 2, name: 'steve', isLoggedIn: true }
+
+                        return (
+                            <div>
+                                <h1>User login status</h1>
+                                    <UserStatus user1={user1} user2={user2}/>
+                            </div>
+                        )
+
+                    }
+                    ReactDOM.render(<App/>,rootHandle)
+        </script>
+    
+</body></html>

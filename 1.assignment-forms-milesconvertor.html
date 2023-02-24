@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0404)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f979a800cf2f9103053e1d3/622c3cdf0cf2e355441328d5/1655789405850/1.assignment-forms-milesconvertor.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677236295&Signature=4ho7lvp7sK%2FmMPhcSPfuGr1C0nU%3D&x-itemId=5f979a800cf2f9103053e1d3&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./1.assignment-forms-milesconvertor_files/react.development.js.download"></script>
+        <script src="./1.assignment-forms-milesconvertor_files/react-dom.development.js.download"></script>
+        <script src="./1.assignment-forms-milesconvertor_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            const {useState} = React
+
+            const MilesConvertor=()=>{
+                const [miles,setMiles] = useState('')
+                const [kilometer,setKilometer] = useState('')
+
+                const handleChange=(e)=>{
+                    let miles = e.target.value
+                    let kilometer = miles* 1.609344
+                    setMiles(miles)
+                    setKilometer(kilometer)
+                }
+
+                
+                return (
+                    <div>
+                        <h1>Distance Calculator</h1><hr/>
+                        <h2>kms - {kilometer}</h2>
+                        <h2>miles - {miles}</h2>
+                        <input id="typeinp" type="range" defaultValue ="1" min = "1" max="100" 
+                                onChange={handleChange} step="1"/>
+                    </div>
+                )
+            }
+            ReactDOM.render(<MilesConvertor/>,rootHandle)
+        </script>
+    
+</body></html>

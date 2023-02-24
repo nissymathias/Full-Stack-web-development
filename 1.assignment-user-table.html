@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0392)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5fa0c3e10cf2f81dca32a193/622c3cdf0cf2e355441328d5/1656306146226/1.assignment-user-table.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677244382&Signature=M5D3Zw4ddMe0dutgQ8nCNIeb5Nw%3D&x-itemId=5fa0c3e10cf2f81dca32a193&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./1.assignment-user-table_files/react.development.js.download"></script>
+        <script src="./1.assignment-user-table_files/react-dom.development.js.download"></script>
+        <script src="./1.assignment-user-table_files/babel.js.download"></script>
+        <script src="./1.assignment-user-table_files/axios.min.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            const url='https://jsonplaceholder.typicode.com/users'
+            const {useState,useEffect} = React 
+
+            function UsersTable (props){
+                const [countries,setCountries]= useState([])
+
+                useEffect(()=>{
+                    axios.get(url)
+                        .then((response)=>{
+                            
+                        const result = response.data
+                        console.log(result)
+                        setCountries(result)
+                        })
+                    //const xhr=new XMLHttpRequest()
+                    //xhr.open('GET',url)
+                    //xhr.send()
+                    //xhr.onload = function(){
+                    //    const result = JSON.parse(xhr.responseText)
+                    //    setCountries(result)
+                    //}
+                },[])
+                return (
+                    <div>                    
+                        <h1>Listing users - {countries.length}</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>name</th>
+                                    <th>email</th>
+                                    <th>city</th>
+                                    <th>position</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {countries.map((ele)=>{
+                                    return (
+                                        <tr key ={ele.id}>
+                                            <td>{ele.id}</td>
+                                            <td>{ele.name}</td>
+                                            <td>{ele.email}</td>
+                                            <td>{ele.address.city}</td>
+                                            <td>{ele.address.geo.lat},{ele.address.geo.lng}</td>
+                                        </tr> 
+                                    )
+                                })}
+                                
+                            </tbody>
+                            </table>
+                    </div>
+                )
+            }
+            ReactDOM.render(<UsersTable/>,rootHandle)
+        </script>
+    
+</body></html>

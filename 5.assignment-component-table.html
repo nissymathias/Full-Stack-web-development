@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0399)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f6d80900cf2441dcc6ed803/622c3cdf0cf2e355441328d5/1654774334062/5.assignment-component-table.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677232064&Signature=%2FLON4kPYA1TH5KcknQ0zcNBQMQs%3D&x-itemId=5f6d80900cf2441dcc6ed803&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./5.assignment-component-table_files/react.development.js.download"></script>
+        <script src="./5.assignment-component-table_files/react-dom.development.js.download"></script>
+        <script src="./5.assignment-component-table_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            
+            const users = [
+                { id: 1, name: 'user1', email: 'u1@gmail.com'},
+                { id: 2, name: 'user2', email: 'u2@gmail.com' },
+                { id: 3, name: 'user3', email: 'u3@gmail.com' }
+            ]
+
+            function UserTable(props){
+                return (
+                    <div>
+                            <table>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>name</th>
+                                            <th>email</th>
+                                        </tr>
+                                        {props.users.map((ele)=>{
+                                        return ( 
+                                            <tr>
+                                                <td>{ele.id}</td>
+                                                <td>{ele.name}</td>
+                                                <td>{ele.email}</td>
+                                            </tr>
+                                        )
+                                    })}
+                                    </table>
+                   
+                    </div>
+                )
+            }
+
+            ReactDOM.render(<UserTable users={users}/>,rootHandle)
+        </script>
+    
+</body></html>

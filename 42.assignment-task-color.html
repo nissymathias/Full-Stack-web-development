@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0393)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f7717750cf23e824a68838c/622c3cdf0cf2e355441328d5/1654498416766/42.assignment-task-color.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677233624&Signature=m5ms8MG4ViWmWGe8vpABpnDRc24%3D&x-itemId=5f7717750cf23e824a68838c&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <style>
+            #myDIV {    
+              color: green;
+            }
+            #myColor {    
+              color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="root">
+        
+        </div>
+        <script src="./42.assignment-task-color_files/react.development.js.download"></script>
+        <script src="./42.assignment-task-color_files/react-dom.development.js.download"></script>
+        <script src="./42.assignment-task-color_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            function TasksList(props){ //child
+            console.log(props)
+            return (
+                <div>
+                    
+                    <ul>
+                        {props.tasks.map((ele) => {
+                            return (ele.completed)?<li id ="myDIV">{ele.title}</li>:<li id="myColor">{ele.title}</li>
+                        })}
+                    </ul>
+                </div>
+            )
+            }
+
+            function App(props){ //parent
+            
+            const tasks = [
+            { id: 1, title: 'Task 1', completed: true },
+            { id: 2, title: 'Task 2', completed: false },
+            { id: 3, title: 'Task 3', completed: true }
+            ]
+                return (
+                    <div>
+                        <h2>Listing Tasks - {tasks.length}</h2>
+                        <TasksList tasks = {tasks}/>
+                    </div>
+                )
+
+            }
+            ReactDOM.render(<App/>,rootHandle)
+        </script>
+    
+</body></html>

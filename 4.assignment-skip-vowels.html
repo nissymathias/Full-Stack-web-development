@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0395)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f979c810cf203a337482fc6/622c3cdf0cf2e355441328d5/1655908938984/4.assignment-skip-vowels.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677236369&Signature=mq2zMyQ60DsibsPcytZ61rCw%2Fuw%3D&x-itemId=5f979c810cf203a337482fc6&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./4.assignment-skip-vowels_files/react.development.js.download"></script>
+        <script src="./4.assignment-skip-vowels_files/react-dom.development.js.download"></script>
+        <script src="./4.assignment-skip-vowels_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+            const {useState} = React 
+
+            const DisplayCap =()=>{
+                const [input,setInput] = useState('')
+                const[output,setOutput] = useState('')
+                
+                const handleInput=(e)=>{
+                    console.log(e.target.value)
+                    let caps = e.target.value
+                    let consonants = /[bdfghjklmnpqrstvwxyz]/gi;
+                    let result = caps.match(consonants);
+                    setOutput(result)
+                    
+                }
+                return (
+                    <div>
+                        <h1>Text without vowels</h1>
+                        <h1>{output}</h1>
+                        <input type="text" value={input} onChange={handleInput}/>
+                    </div>
+                )
+            }
+            ReactDOM.render(<DisplayCap/>,rootHandle)
+        </script>
+    
+</body></html>

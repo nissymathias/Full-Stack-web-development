@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0398)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f7717b70cf23e824a6883a7/622c3cdf0cf2e355441328d5/1654608670808/44.assignment-user-info.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677235959&Signature=oJYdhz3bpKwqs%2FYQX%2BBB2jN%2Btpc%3D&x-itemId=5f7717b70cf23e824a6883a7&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./44.assignment-user-info_files/react.development.js.download"></script>
+        <script src="./44.assignment-user-info_files/react-dom.development.js.download"></script>
+        <script src="./44.assignment-user-info_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            function UserInfo(props){
+                console.log(props)
+                if(props.user2.email ==='' && props.user2.city ===''){
+                    props.user2.email = 'N/A' 
+                    props.user2.city = 'N/A'
+                }
+                return (
+                    <div>
+                        <p>id - {props.user1.id} <br/> name - {props.user1.name}<br/>email - {props.user1.email} <br/> city - {props.user1.city}<br/><hr/>id - {props.user2.id} <br/> name - {props.user2.name}<br/>email - {props.user2.email} <br/> city - {props.user2.city}<br/><hr/></p>
+                    </div>
+                )
+            }
+            function App(props){
+                const user1 = { id: 1, name: 'user1', email: 'user1@gmail.com', city: 'bangalore'}
+                const user2 = { id: 1, name: 'user1', email: '', city: ''}
+
+                return (
+                    <div>
+                        <UserInfo user1={user1} user2={user2}/>
+                    </div>
+                )
+            }
+            ReactDOM.render(<App/>,rootHandle)
+
+        </script>
+    
+</body></html>

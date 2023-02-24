@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0386)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f69785f0cf251a0a3fca59f/622c3cdf0cf2e355441328d5/1653385920661/4.multi-color.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677231751&Signature=QjAgJjjt41hXi%2FNU%2Fk8gAVSZ5Oc%3D&x-itemId=5f69785f0cf251a0a3fca59f&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>
+            Multiple colors
+        </title>
+    <script>'use strict';
+
+var rootHandle = document.getElementById('root');
+
+var colors = [{ color: 'red', symbols: ['energy', 'strength', 'power', 'courage'] }, { color: 'blue', symbols: ['loyalty', 'trust', 'stability', 'confidence'] }, { color: 'orange', symbols: ['excitment', 'fun', 'haste', 'action'] }, { color: 'yellow', symbols: ['cheerfulness', 'happiness', 'joy', 'optimism'] }];
+
+var ele = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        { style: { color: 'red' } },
+        'EXAMPLE OUTPUT'
+    ),
+    React.createElement('hr', null),
+    React.createElement(
+        'h2',
+        null,
+        'Colors & its symbols'
+    ),
+    React.createElement(
+        'ul',
+        null,
+        Object.keys(colors).map(function (ele, i) {
+            console.log(ele, i);
+            var result = (i ? ',' : '') + colors[i].symbols;
+            return React.createElement(
+                'li',
+                { key: i },
+                ' ',
+                colors[i].color,
+                ' - ',
+                result,
+                ' '
+            );
+        })
+    )
+);
+ReactDOM.render(ele, rootHandle);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsicm9vdEhhbmRsZSIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJjb2xvcnMiLCJjb2xvciIsInN5bWJvbHMiLCJlbGUiLCJPYmplY3QiLCJrZXlzIiwibWFwIiwiaSIsImNvbnNvbGUiLCJsb2ciLCJyZXN1bHQiLCJSZWFjdERPTSIsInJlbmRlciJdLCJtYXBwaW5ncyI6Ijs7QUFDVyxJQUFNQSxhQUFhQyxTQUFTQyxjQUFULENBQXdCLE1BQXhCLENBQW5COztBQUVBLElBQU1DLFNBQVMsQ0FDVixFQUFFQyxPQUFPLEtBQVQsRUFBZ0JDLFNBQVMsQ0FBQyxRQUFELEVBQVcsVUFBWCxFQUF1QixPQUF2QixFQUFnQyxTQUFoQyxDQUF6QixFQURVLEVBRVYsRUFBRUQsT0FBTyxNQUFULEVBQWlCQyxTQUFTLENBQUMsU0FBRCxFQUFZLE9BQVosRUFBcUIsV0FBckIsRUFBa0MsWUFBbEMsQ0FBMUIsRUFGVSxFQUdWLEVBQUVELE9BQU8sUUFBVCxFQUFtQkMsU0FBUyxDQUFDLFdBQUQsRUFBYyxLQUFkLEVBQXFCLE9BQXJCLEVBQThCLFFBQTlCLENBQTVCLEVBSFUsRUFJVixFQUFFRCxPQUFPLFFBQVQsRUFBbUJDLFNBQVMsQ0FBQyxjQUFELEVBQWlCLFdBQWpCLEVBQThCLEtBQTlCLEVBQXFDLFVBQXJDLENBQTVCLEVBSlUsQ0FBZjs7QUFPQyxJQUFNQyxNQUNOO0FBQUE7QUFBQTtBQUNJO0FBQUE7QUFBQSxVQUFJLE9BQVMsRUFBQ0YsT0FBTSxLQUFQLEVBQWI7QUFBQTtBQUFBLEtBREo7QUFDbUQsbUNBRG5EO0FBRUk7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQUZKO0FBSUk7QUFBQTtBQUFBO0FBQ0tHLGVBQU9DLElBQVAsQ0FBWUwsTUFBWixFQUFvQk0sR0FBcEIsQ0FBd0IsVUFBQ0gsR0FBRCxFQUFLSSxDQUFMLEVBQVc7QUFDaENDLG9CQUFRQyxHQUFSLENBQVlOLEdBQVosRUFBZ0JJLENBQWhCO0FBQ0EsZ0JBQU1HLFNBQVUsQ0FBQ0gsSUFBSSxHQUFKLEdBQVUsRUFBWCxJQUFrQlAsT0FBT08sQ0FBUCxFQUFVTCxPQUE1QztBQUNBLG1CQUFPO0FBQUE7QUFBQSxrQkFBSSxLQUFNSyxDQUFWO0FBQUE7QUFBZ0JQLHVCQUFPTyxDQUFQLEVBQVVOLEtBQTFCO0FBQUE7QUFBb0NTLHNCQUFwQztBQUFBO0FBQUEsYUFBUDtBQUNILFNBSkE7QUFETDtBQUpKLENBREE7QUFjQUMsU0FBU0MsTUFBVCxDQUFnQlQsR0FBaEIsRUFBb0JOLFVBQXBCIiwiZmlsZSI6IklubGluZSBCYWJlbCBzY3JpcHQiLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgICAgICAgICAgY29uc3Qgcm9vdEhhbmRsZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JylcbiAgICAgICAgICAgXG4gICAgICAgICAgIGNvbnN0IGNvbG9ycyA9IFtcbiAgICAgICAgICAgICAgICB7IGNvbG9yOiAncmVkJywgc3ltYm9sczogWydlbmVyZ3knLCAnc3RyZW5ndGgnLCAncG93ZXInLCAnY291cmFnZSddfSxcbiAgICAgICAgICAgICAgICB7IGNvbG9yOiAnYmx1ZScsIHN5bWJvbHM6IFsnbG95YWx0eScsICd0cnVzdCcsICdzdGFiaWxpdHknLCAnY29uZmlkZW5jZSddfSxcbiAgICAgICAgICAgICAgICB7IGNvbG9yOiAnb3JhbmdlJywgc3ltYm9sczogWydleGNpdG1lbnQnLCAnZnVuJywgJ2hhc3RlJywgJ2FjdGlvbiddfSxcbiAgICAgICAgICAgICAgICB7IGNvbG9yOiAneWVsbG93Jywgc3ltYm9sczogWydjaGVlcmZ1bG5lc3MnLCAnaGFwcGluZXNzJywgJ2pveScsICdvcHRpbWlzbSddfVxuICAgICAgICAgICAgXVxuXG4gICAgICAgICAgICBjb25zdCBlbGUgPSAoXG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxoMSBzdHlsZSA9IHt7Y29sb3I6J3JlZCd9fT5FWEFNUExFIE9VVFBVVDwvaDE+PGhyLz5cbiAgICAgICAgICAgICAgICA8aDI+Q29sb3JzICYgaXRzIHN5bWJvbHM8L2gyPlxuXG4gICAgICAgICAgICAgICAgPHVsPlxuICAgICAgICAgICAgICAgICAgICB7T2JqZWN0LmtleXMoY29sb3JzKS5tYXAoKGVsZSxpKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhlbGUsaSlcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHJlc3VsdCA9ICAoaSA/ICcsJyA6ICcnKSArICBjb2xvcnNbaV0uc3ltYm9scyBcbiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiA8bGkga2V5ID17aX0+IHsgY29sb3JzW2ldLmNvbG9yfSAtIHtyZXN1bHR9IDwvbGk+XG4gICAgICAgICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIClcbiAgICAgICAgICAgIFJlYWN0RE9NLnJlbmRlcihlbGUscm9vdEhhbmRsZSlcbiAgICAgICAgIl19</script></head>
+    <body>
+        <div id="root"><div><h1 style="color: red;">EXAMPLE OUTPUT</h1><hr><h2>Colors &amp; its symbols</h2><ul><li> red - energy,strength,power,courage </li><li> blue - ,loyalty,trust,stability,confidence </li><li> orange - ,excitment,fun,haste,action </li><li> yellow - ,cheerfulness,happiness,joy,optimism </li></ul></div></div>
+
+        <script crossorigin="" src="./Multiple colors_files/react.development.js.download"></script>
+        <script crossorigin="" src="./Multiple colors_files/react-dom.development.js.download"></script>
+        <script crossorigin="" src="./Multiple colors_files/babel.js.download"></script>
+
+        <script type="text/babel">
+           const rootHandle = document.getElementById('root')
+           
+           const colors = [
+                { color: 'red', symbols: ['energy', 'strength', 'power', 'courage']},
+                { color: 'blue', symbols: ['loyalty', 'trust', 'stability', 'confidence']},
+                { color: 'orange', symbols: ['excitment', 'fun', 'haste', 'action']},
+                { color: 'yellow', symbols: ['cheerfulness', 'happiness', 'joy', 'optimism']}
+            ]
+
+            const ele = (
+            <div>
+                <h1 style = {{color:'red'}}>EXAMPLE OUTPUT</h1><hr/>
+                <h2>Colors & its symbols</h2>
+
+                <ul>
+                    {Object.keys(colors).map((ele,i) => {
+                        console.log(ele,i)
+                        const result =  (i ? ',' : '') +  colors[i].symbols 
+                        return <li key ={i}> { colors[i].color} - {result} </li>
+                    })}
+                </ul>
+            </div>
+            )
+            ReactDOM.render(ele,rootHandle)
+        </script>
+    
+</body></html>

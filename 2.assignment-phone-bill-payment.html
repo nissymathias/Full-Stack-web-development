@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0404)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f979c090cf203a337482fac/622c3cdf0cf2e355441328d5/1655795380174/2.assignment-phone-bill-payment.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677236321&Signature=rhvf75XeBFdHrq7kqqnWPw%2B%2BGN8%3D&x-itemId=5f979c090cf203a337482fac&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./2.assignment-phone-bill-payment_files/react.development.js.download"></script>
+        <script src="./2.assignment-phone-bill-payment_files/react-dom.development.js.download"></script>
+        <script src="./2.assignment-phone-bill-payment_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            const {useState} = React
+
+            const BillPayment =()=>{
+                const [search,setSearch] = useState('')
+                const [bill,setBill] = useState('vodafone')
+
+                const handleBill=(e)=>{
+                    let value = e.target.value
+                    setBill(value)
+                }
+                const handleSearch=(e)=>{
+                    let value = e.target.value
+                    setSearch(value)
+                }
+                
+
+                return (
+                    <div>
+                        <h1>Pay bill for {bill}</h1><hr/>
+                        <form>
+                            <input type="radio" name ="addType" value="vodafone" onChange={handleBill} defaultChecked/>Vodafone<br/>
+                            <input type="radio" name ="addType" value="airtel" onChange={handleBill}/>Airtel<br/>
+                            <input type="radio" name ="addType" value="jio" onChange={handleBill}/>Jio<br/>
+                            <input type="text" placeholder ="enter your number" onChange={handleSearch}/>
+                        </form>
+                    </div>
+                )
+            }
+            
+            ReactDOM.render(<BillPayment/>,rootHandle)
+        </script>
+    
+</body></html>

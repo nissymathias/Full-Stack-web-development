@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0408)https://output-test-videos.s3.amazonaws.com/assets/assignments/5e85a31d0cf2fc4c81d60c2f/5f7156ea0cf2d43e7949dd86/622c3cdf0cf2e355441328d5/1654935252763/5.assignment-event-handlers-random-list.html?AWSAccessKeyId=AKIAJRBKDHC25Y5CPYKA&Expires=1677232294&Signature=qS15ZhxDYDEZefuyiGJL9PyxULg%3D&x-itemId=5f7156ea0cf2d43e7949dd86&x-orgId=5e85a31d0cf2fc4c81d60c2f&x-platform=web&x-userId=622c3cdf0cf2e355441328d5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script src="./5.assignment-event-handlers-random-list_files/react.development.js.download"></script>
+        <script src="./5.assignment-event-handlers-random-list_files/react-dom.development.js.download"></script>
+        <script src="./5.assignment-event-handlers-random-list_files/babel.js.download"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            function RandomElement(props){
+                const fruits = ['apple', 'water melon', 'strawberry', 'kiwi']
+
+                return (
+                    <div>
+                        <button onClick={PickRandom}>Pick Random</button>
+                        {fruits.map((ele)=>{
+                            return <li>{ele}</li>
+                        })}
+                  
+                    </div>
+                )
+                function PickRandom(props){
+                    let random = Math.floor(Math.random()*fruits.length);
+                            alert(fruits[random])
+                        
+                
+                }
+            }
+            const ele = <RandomElement/>
+            ReactDOM.render(ele,rootHandle)
+        </script>
+    
+</body></html>
