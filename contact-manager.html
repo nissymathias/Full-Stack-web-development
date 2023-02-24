@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Contact Manager App
+    </title>
+</head>
+
+<body>
+    <h1>My Contacts</h1>
+    <h2>Listing Contacts - <span id="count"></span></h2>
+    <input type="text" placeholder="search by name or mobile" id="search" /> <br/> 
+    <ul id="list">
+       
+    </ul>
+
+    <script>
+        const contacts = [
+            { id: 1, name: 'john', mobile: '987654321'},
+            { id: 2, name: 'jack', mobile: '5678901234' },
+            { id: 3, name: 'donna', mobile: '6543211234'}
+        ]
+
+        const countHandle = document.getElementById('count') 
+        countHandle.textContent = contacts.length
+
+        const listHandle = document.getElementById('list') 
+        
+        contacts.forEach((ele) => {
+            const liTag = document.createElement('li')
+            liTag.textContent = `${ele.name} - ${ele.mobile}`
+            listHandle.appendChild(liTag)
+        })
+
+        const searchHandle = document.querySelector('#search')
+        // addEventListener / property 
+        searchHandle.addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value 
+            const result = contacts.filter((ele) => {
+                return ele.name.includes(searchTerm) || ele.mobile.includes(searchTerm)
+            })
+            
+            listHandle.innerHTML = ''
+            countHandle.textContent = result.length
+            result.forEach((ele) => {
+                const liTag = document.createElement('li')
+                liTag.textContent = `${ele.name} - ${ele.mobile}`
+                listHandle.appendChild(liTag)
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>
